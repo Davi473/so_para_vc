@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <titl>Bora?</title>
+        <style>
+            .frase {
+                font-size: 20px;
+                color: white;
+                border-radius: 10px;
+                height: 1000px;
+                background: #191919;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .button {
+                display: inline-block;
+                margin: 10px;
+                padding: 15px 30px;
+                background-color: white;
+                color: blue;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            
+        </style>
+    </head>
+    <body class="frase">
+        <h2>
+            Quer Transar?
+        </h2>
+        <div id="buttons-container">
+
+            <button class="button" onclick="alert('Sim')">
+                <a href="https://www.youtube.com/watch?v=Kd_phJHKVAM">Sim</a>
+            </button>
+
+            <button class="button" id="no-button" onmouseover="moveButton()">
+                Não
+            </button>
+        </div>
+
+        <script>
+            function moveButton() {
+            var button = document.getElementById("no-button");
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            var randomX = Math.floor(Math.random() * (windowWidth - 100));
+            var randomY = Math.floor(Math.random() * (windowHeight - 100));
+            
+            button.style.position = "absolute";
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+            }
+        </script>
+    </body>
+</html>
